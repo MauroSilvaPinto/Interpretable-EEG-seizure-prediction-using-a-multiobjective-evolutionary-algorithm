@@ -59,5 +59,5 @@ More information, please just check the article at:
 
 You are free to use any of this material. If you do, please just cite it as:
 adasdjaksdasdakjdkasjdkajdkajdak 
-**Free Software, Hell Yeah!**
+
 
