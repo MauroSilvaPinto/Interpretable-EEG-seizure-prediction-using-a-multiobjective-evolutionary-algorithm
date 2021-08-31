@@ -53,7 +53,7 @@ You can execute the control method for Patient 1321803, which uses the same data
 - [test_one_patient]: test one patient, using the obtained best pre-ictal and number of features, with new tested seizures.
 
 
-## License
+## More Information
 More information, please just check the article at:
 
 
