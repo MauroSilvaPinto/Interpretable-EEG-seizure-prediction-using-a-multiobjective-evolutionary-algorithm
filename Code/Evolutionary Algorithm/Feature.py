@@ -16,6 +16,13 @@ Each hyper-feature is constituted by several genes:
     - one wavelet band feature gene
     - one hjorth parameter gene
     - one spectral edge frequency feature gene
+    
+
+ps: electrodes are in the old nomenclature of 10-20 eeg system    
+    T3 is now T7.
+    T4 is now T8.
+    T5 is now P7.
+    T6 is now P8.
 
 """
 
