@@ -2,6 +2,9 @@
 a code to make a chrd plot,
 by plotting the all genes interaction
 
+this figure is interactive:
+    if you click in one gene, you will highlight its gene iteractions
+
 """
 
 import numpy as np
@@ -74,7 +77,14 @@ for i in range (0,len(transactions)):
             transactions[i][j]=transactions[i][j].replace("d2","Wavelet D2")
         if "d1" in transactions[i][j]:
             transactions[i][j]=transactions[i][j].replace("d1","Wavelet D1")
-        
+        if "T3" in transactions[i][j]:
+            transactions[i][j]=transactions[i][j].replace("T3","T7")
+        if "T4" in transactions[i][j]:
+            transactions[i][j]=transactions[i][j].replace("T4","T8")
+        if "T5" in transactions[i][j]:
+            transactions[i][j]=transactions[i][j].replace("T5","P7")
+        if "T6" in transactions[i][j]:
+            transactions[i][j]=transactions[i][j].replace("T6","P8")
 #%% making the apriori algorithm
 association_rules = apriori(transactions, min_support=0.07, min_confidence=0.1, min_lift=1, max_length=15)
 association_results = list(association_rules)   
@@ -142,7 +152,7 @@ feat_labels = ["Intensity Mean", "Intensity Variance", "Skewness", "Kurtosis", "
                 "Wavelet D4", "Wavelet D3", "Wavelet D2", "Wavelet D1", "Features"]
 
 electrodes_list=['C3','C4','Cz','F3','F4','F7', 'F8','FP1','FP2',
-                  'Fz','O1','O2','P3','P4','Pz', 'T3','T4','T5','T6',
+                  'Fz','O1','O2','P3','P4','Pz', 'T7','T8','P7','P8',
                   "Electrodes"]
 
 window_lengths = ["1", "5", "10", "15", "20", "Window (minutes)"]
@@ -236,5 +246,3 @@ for t in cbar.ax.get_yticklabels():
  
 
 #fig[0].savefig("chord_diagram.pdf", facecolor='white')
-
-    
