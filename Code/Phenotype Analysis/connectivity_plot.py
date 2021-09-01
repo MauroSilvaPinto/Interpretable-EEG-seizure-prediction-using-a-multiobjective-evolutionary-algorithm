@@ -2,6 +2,9 @@
 a code to make a connectivity plot,
 by plotting the electrode genes interaction
 
+this image is interactive:
+you click on each gene to isolate its interactions
+
 """
 
 import numpy as np
