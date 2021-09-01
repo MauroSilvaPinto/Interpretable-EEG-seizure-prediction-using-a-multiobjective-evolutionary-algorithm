@@ -2,9 +2,6 @@
 a code to make a connectivity plot,
 by plotting the electrode genes interaction
 
-this image is interactive:
-you click on each gene to isolate its interactions
-
 """
 
 import numpy as np
@@ -76,6 +73,14 @@ for i in range (0,len(transactions)):
             transactions[i][j]=transactions[i][j].replace("d2","Wavelet D2")
         if "d1" in transactions[i][j]:
             transactions[i][j]=transactions[i][j].replace("d1","Wavelet D1")
+        if "T3" in transactions[i][j]:
+            transactions[i][j]=transactions[i][j].replace("T3","T7")
+        if "T4" in transactions[i][j]:
+            transactions[i][j]=transactions[i][j].replace("T4","T8")
+        if "T5" in transactions[i][j]:
+            transactions[i][j]=transactions[i][j].replace("T5","P7")
+        if "T6" in transactions[i][j]:
+            transactions[i][j]=transactions[i][j].replace("T6","P8")
         
 #%% making the apriori algorithm
 association_rules = apriori(transactions, min_support=0.07, min_confidence=0.1, min_lift=1, max_length=15)
@@ -132,8 +137,9 @@ for i in range (20,0,-1):
 
 electrodes_list_conversion=["FP1","FP2","Fz","F3","F4",
                             "F7","F8","Cz","C3","C4",
-                            "T3","T4","Pz","P3","P4",
-                            "T5","T6","O1","O2"]
+                            "T7","T8","Pz","P3","P4",
+                            "P7","P8","O1","O2"]
+
 
 #create connections
 con=np.zeros([len(electrodes_list_conversion),len(electrodes_list_conversion)])
