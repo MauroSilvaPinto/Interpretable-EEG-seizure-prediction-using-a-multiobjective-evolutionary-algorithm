@@ -26,7 +26,7 @@ def removeConstantFeatures(features):
     constant_features_index=[]
     
     #finding features with corr<1e-9
-    for i in range(0,1,features.shape[1]):
+    for i in range(0,features.shape[1]):
         if np.var(features[:,i])<1e-9:
             constant_features_index.append(i)
       
@@ -39,7 +39,7 @@ def removeRedundantFeatures(features):
     redundant_features_index=[]
     
     #finding features with corr>0.95
-    for i in range(0,1,features.shape[1]):
+    for i in range(0,features.shape[1]):
         for j in range(i,1,features.shape[1]):
             if abs(np.corrcoef(features[:,i],features[:,j])[0][1])>0.95:
                 redundant_features_index.append(j)
@@ -52,7 +52,7 @@ def removeRedundantFeatures(features):
 def filterFeatureSelectionCorr(features,labels,n_features):
     feature_corr_value=np.ones(features.shape[1])
     # get all features correlation with label
-    for i in range(0,1,features.shape[1]):
+    for i in range(0,features.shape[1]):
         feature_corr_value[i]=abs(np.corrcoef(features[:,i],np.transpose(labels))[0][1])
         
     # sort features by descend order and get the best n_features
@@ -71,7 +71,7 @@ def filterFeatureSelectionCorr(features,labels,n_features):
 def filterFeatureSelectionAUC(features,labels,n_features):
     feature_auc_value=np.ones(features.shape[1])
     # get all features correlation with label
-    for i in range(0,1,features.shape[1]):
+    for i in range(0,features.shape[1]):
         fpr, tpr, thresholds = metrics.roc_curve(labels, features[:,i], pos_label=1)
         feature_auc_value[i]=1-metrics.auc(fpr,tpr)
         
