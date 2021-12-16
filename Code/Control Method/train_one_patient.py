@@ -176,9 +176,9 @@ def calculatePreIctalAndFeatureNumber(patient_id):
                 testing_features=np.delete(testing_features,constant_indexes,axis=1)
                 
                 # remove redundant features from training (corr>0.95)
-                [redundant_indexes,training_features]=removeRedundantFeatures(training_features);
+                #[redundant_indexes,training_features]=removeRedundantFeatures(training_features);
                 # remove the same features from testing features
-                testing_features=np.delete(testing_features,redundant_indexes,axis=1)
+                #testing_features=np.delete(testing_features,redundant_indexes,axis=1)
                 
                 
                 #################### Standardization #######################
