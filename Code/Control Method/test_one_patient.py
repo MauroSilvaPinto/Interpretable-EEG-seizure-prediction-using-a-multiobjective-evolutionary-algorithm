@@ -121,7 +121,7 @@ def testOnePatient(patient_id,pre_ictal,k_features,total_seizures):
     [constant_indexes,training_features]=removeConstantFeatures(training_features);
                     
     # remove redundant features from training (corr>0.95)
-    [redundant_indexes,training_features]=removeRedundantFeatures(training_features);
+    #[redundant_indexes,training_features]=removeRedundantFeatures(training_features);
                     
     #################### Standardization #######################
     # training features
@@ -210,9 +210,9 @@ def testOnePatient(patient_id,pre_ictal,k_features,total_seizures):
     for i in range(0,len(testing_labels)):
         testing_features[i]=np.delete(testing_features[i],constant_indexes,axis=1)
      
-    for i in range(0,len(testing_labels)):               
+    # for i in range(0,len(testing_labels)):               
         # remove the same features from testing features
-        testing_features[i]=np.delete(testing_features[i],redundant_indexes,axis=1)
+        # testing_features[i]=np.delete(testing_features[i],redundant_indexes,axis=1)
                     
     #################### Standardization #######################                
     for i in range(0,len(testing_labels)): 
