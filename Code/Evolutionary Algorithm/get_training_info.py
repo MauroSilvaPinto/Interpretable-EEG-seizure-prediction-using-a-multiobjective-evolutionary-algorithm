@@ -115,7 +115,7 @@ electrodes=[]
 for i in range(len(selected_individuals)):
     selected_solution = selected_individuals[i]
     
-    pre_ictals.append(selected_solution.decodePreictalThreshold())
+    pre_ictals.append(StatisticalValidation.computePreIctalPeriod(selected_solution))
     sensitivities.append(selected_solution.fitness[0])
     specificities.append(selected_solution.fitness[1])
     electrodes.append(selected_solution.fitness[2])
