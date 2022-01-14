@@ -1,7 +1,7 @@
 ## Interpretable EEG seizure prediction using a multiobjective evolutionary algorithm
 
 
-This is the code used for the paper "On the extension and improvement of a personalized and evolutionary algorithm for interpretable EEG epilepsy seizure prediction". It is a patient-specific Evolutionary Algorithm  for predicting epileptic seizures with the EEG signal, from data preprocessing to phenotype study.
+This is the code used for the paper "Interpretable EEG seizure prediction using a multiobjective evolutionary algorithm". It is a patient-specific Evolutionary Algorithm  for predicting epileptic seizures with the EEG signal, from data preprocessing to phenotype study.
 
 ## Code Organization Folders
 
