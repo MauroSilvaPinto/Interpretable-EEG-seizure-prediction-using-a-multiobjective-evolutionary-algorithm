@@ -54,7 +54,15 @@ class StatisticalValidation():
         
         return s_kmax
     
-    # computes SOP for a given individual (needed for the random predictor)
+    # computes the Pre-Ictal Period for a given individual
+    def computePreIctalPeriod(individual):
+        delays = []
+        for f in individual.features:
+            delays.append(f.decodeDelay())
+        
+        return min(delays) + individual.decodePreictalThreshold()
+    
+        # computes SOP for a given individual (needed for the random predictor)
     def computeSOP(individual):
         delays = []
         for f in individual.features:
