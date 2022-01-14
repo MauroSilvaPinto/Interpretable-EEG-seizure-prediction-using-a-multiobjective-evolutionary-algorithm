@@ -1,4 +1,4 @@
-## Interpretable EEG epilepsy seizure prediction methods using multiobjective evolutionary algorithms
+## Interpretable EEG seizure prediction using a multiobjective evolutionary algorithm
 
 
 This is the code used for the paper "On the extension and improvement of a personalized and evolutionary algorithm for interpretable EEG epilepsy seizure prediction". It is a patient-specific Evolutionary Algorithm  for predicting epileptic seizures with the EEG signal, from data preprocessing to phenotype study.
