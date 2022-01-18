@@ -66,7 +66,7 @@ class FitnessFunction():
         if any("O" in s for s in unique_electrodes): # OCCIPITAL
             number_lobes += 1
             
-        return 1 - (number_electrodes * number_lobes)/(len(individual_features)*5)
+        return 1.25*(1 - (number_electrodes * number_lobes)/(len(unique_electrodes)*5))
         
         
     # PLACEHOLDER METHOD: fitness = mean(sens, FPR) -> this was for the single-objective version of the algorithm...
