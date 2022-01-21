@@ -15,6 +15,8 @@ This is the code used for the paper "Interpretable EEG seizure prediction using 
 - Processed_data
 - Results
 - Trained_evol
+- Impact of Comfort in Performance
+- Overall Phenotype Study 
 
 ## Preprocessing
 
