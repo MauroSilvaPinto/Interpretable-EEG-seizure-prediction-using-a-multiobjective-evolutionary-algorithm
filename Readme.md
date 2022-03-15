@@ -60,6 +60,6 @@ More information, please just check the article at:
 
 
 You are free to use any of this material. If you do, please just cite it as:
-adasdjaksdasdakjdkasjdkajdkajdak 
+Pinto, M., Coelho, T., Leal, A. et al. Interpretable EEG seizure prediction using a multiobjective evolutionary algorithm. Sci Rep 12, 4420 (2022). https://doi.org/10.1038/s41598-022-08322-w
 
 
